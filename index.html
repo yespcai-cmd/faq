@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="教室に関するご質問にお答えするAIフクロウのチャットボットです。">
+  <title>AIフクロウ｜お問い合わせ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="chat-card" aria-label="AIフクロウ チャットボット">
+      <header class="chat-header">
+        <div class="owl-avatar" aria-hidden="true">🦉</div>
+        <div class="header-copy">
+          <h1>AIフクロウ</h1>
+          <p>教室についてお気軽にご質問ください</p>
+        </div>
+        <span class="status"><span class="status-dot"></span>受付中</span>
+      </header>
+
+      <div id="chatMessages" class="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
+        <div class="message-row bot-row">
+          <div class="message-avatar" aria-hidden="true">🦉</div>
+          <div class="message-bubble bot-bubble">
+            こんにちは！AIフクロウです。<br>
+            教室について分からないことがあれば聞いてください。
+          </div>
+        </div>
+      </div>
+
+      <div id="quickQuestions" class="quick-questions" aria-label="質問例">
+        <button type="button" class="quick-question">営業時間は何時から何時までですか？</button>
+        <button type="button" class="quick-question">教室の住所とアクセス方法を教えてください。</button>
+        <button type="button" class="quick-question">駐車場はありますか？</button>
+        <button type="button" class="quick-question">無料体験の予約方法を教えてください。</button>
+      </div>
+
+      <form id="chatForm" class="chat-form">
+        <label class="sr-only" for="questionInput">質問を入力</label>
+        <textarea id="questionInput" name="question" rows="1" maxlength="1000"
+          placeholder="質問を入力してください…" required></textarea>
+        <button id="sendButton" class="send-button" type="submit" aria-label="送信">
+          <span aria-hidden="true">➤</span>
+        </button>
+      </form>
+      <p class="privacy-note">個人情報やパスワードなどは入力しないでください。</p>
+      <div id="connectionNotice" class="connection-notice" hidden></div>
+    </section>
+    <footer class="page-footer">回答内容が不明な場合は、教室スタッフへお問い合わせください。</footer>
+  </main>
+</body>
+</html>
