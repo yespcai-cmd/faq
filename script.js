@@ -4,7 +4,7 @@
  * 公開前に GAS_WEB_APP_URL を実際のGAS WebアプリURLへ変更してください。
  * 例: https://script.google.com/macros/s/xxxxxxxx/exec
  */
-const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw0T7Os54nA8AQ2Kc3X3MX4zZXXoFq5JX4YCuLqxQPQyAAPxNCYEbKftIrDVdF_q8Jf/exec";
+const GAS_WEB_APP_URL = "https://faq-api.yespcai.workers.dev/";
 
 const chatMessages = document.getElementById("chatMessages");
 const chatForm = document.getElementById("chatForm");
