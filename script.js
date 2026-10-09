@@ -4,7 +4,7 @@
  * 公開前に GAS_WEB_APP_URL を実際のGAS WebアプリURLへ変更してください。
  * 例: https://script.google.com/macros/s/xxxxxxxx/exec
  */
-const GAS_WEB_APP_URL = "ここにGASのWebアプリURLを貼り付けてください";
+const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwKXPOMrcX6wSFPWd97Z36-BQ_C_ZMoN8fmDtSEhq_SKVRPiFqGJ49IyCTBMCocCqrB/exec";
 
 const chatMessages = document.getElementById("chatMessages");
 const chatForm = document.getElementById("chatForm");
