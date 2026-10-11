@@ -325,3 +325,77 @@ textarea:focus-visible {
     max-width: 88%;
   }
 }
+
+/* ===== style.css の末尾にそのまま追記してください ===== */
+
+/* FAQ 回答内の改行を表示（動的に追加された AI フクロウの吹き出しのみ） */
+.message-bubble.pre-line {
+  white-space: pre-line;
+}
+
+/* 「該当なし」時の誘導リンク */
+.link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.link-button {
+  display: inline-block;
+  padding: 8px 13px;
+  color: #315f91;
+  background: white;
+  border: 1px solid #c9d9eb;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .15s ease, border-color .15s ease;
+}
+
+.link-button:hover {
+  background: var(--pale-blue);
+  border-color: #82acd7;
+}
+
+.link-button:focus-visible {
+  outline: 3px solid #f2c66d;
+  outline-offset: 2px;
+}
+
+/* 「役に立ちましたか？」 */
+.feedback-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #d3dce8;
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+.feedback-label {
+  margin-right: 2px;
+}
+
+.feedback-button {
+  padding: 3px 10px;
+  color: #315f91;
+  background: white;
+  border: 1px solid #c9d9eb;
+  border-radius: 999px;
+  font-size: .76rem;
+}
+
+.feedback-button:hover {
+  background: var(--pale-blue);
+  border-color: #82acd7;
+}
+
+.feedback-button:focus-visible {
+  outline: 3px solid #f2c66d;
+  outline-offset: 2px;
+}
