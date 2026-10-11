@@ -119,6 +119,24 @@ function addFeedback(bubble, logId) {
   bubble.appendChild(wrap);
 }
 
+/** 選択済みの教室を変えて、同じ質問をもう一度調べられるようにする */
+function addChangeClassroomButton(bubble, question) {
+  const wrap = document.createElement("div");
+  wrap.className = "link-buttons";
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "classroom-button";
+  button.textContent = "別の教室を選ぶ";
+  button.addEventListener("click", async () => {
+    selectedClassroomId = "";
+    await sendQuestion(question, "", false);
+  });
+
+  wrap.appendChild(button);
+  bubble.appendChild(wrap);
+}
+
 function showClassroomChoices(result, originalQuestion) {
   const bubble = addMessageRow("bot", result.answer || "どちらの教室についてお調べしますか？");
   const options = document.createElement("div");
@@ -257,6 +275,7 @@ async function sendQuestion(question, classroomId = selectedClassroomId, showUse
       if (result.url) {
         addLinkToBubble(bubble, `${result.classroomName || "教室"}の公式ページを開く ↗`, result.url);
       }
+      addChangeClassroomButton(bubble, cleanQuestion);
       addFeedback(bubble, result.logId);
       return;
     }
