@@ -40,7 +40,8 @@ button {
 .chat-card {
   display: flex;
   flex-direction: column;
-  min-height: min(760px, calc(100vh - 100px));
+  height: min(760px, calc(100dvh - 60px));
+  min-height: 0;
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -103,12 +104,13 @@ button {
 
 .chat-messages {
   display: flex;
-  flex: 1;
+  flex: 1 1 0;
   flex-direction: column;
   gap: 17px;
   padding: 24px 20px;
   overflow-y: auto;
-  min-height: 260px;
+  min-height: 0;
+  overscroll-behavior-y: contain;
 }
 
 .message-row {
@@ -303,7 +305,9 @@ textarea:focus-visible {
   }
 
   .chat-card {
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
     border: 0;
     border-radius: 0;
   }
