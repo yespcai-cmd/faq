@@ -563,3 +563,8 @@ html.widget-mode .connection-notice {
   padding: 6px 8px;
   font-size: 0.75rem;
 }
+
+/* 外部ウィジェットでは内側のヘッダーを非表示にする */
+html.widget-mode .chat-header {
+  display: none;
+}
