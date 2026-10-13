@@ -450,3 +450,38 @@ textarea:focus-visible {
   line-height: 1.45;
   text-align: left;
 }
+
+
+/* 外部ウィジェット内で表示するときの専用レイアウト */
+html.widget-mode,
+html.widget-mode body {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+html.widget-mode .page {
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html.widget-mode .chat-card {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+html.widget-mode .page-footer {
+  display: none;
+}
