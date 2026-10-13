@@ -4,6 +4,11 @@
  * 通信先: Cloudflare Worker（→ GAS）
  * https://faq-api.yespcai.workers.dev/
  */
+
+if (new URLSearchParams(location.search).get("widget") === "1") {
+  document.documentElement.classList.add("widget-mode");
+}
+
 const GAS_WEB_APP_URL = "https://faq-api.yespcai.workers.dev/";
 
 // フクロウのアバター画像（index.html と同じフォルダに置く）
