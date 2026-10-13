@@ -403,3 +403,34 @@ textarea:focus-visible {
   outline: 3px solid #f2c66d;
   outline-offset: 2px;
 }
+
+/* ===== style.css の末尾にそのまま追記してください =====
+   フクロウのアバターを画像にします。
+   大きさは「隣の文字の大きさの 2 倍」(2em)。文字の大きさに合わせて、画面や設定が変わっても一緒に拡大・縮小します。
+   （元の .owl-avatar / .message-avatar の設定は、このあとに書くので上書きされます） */
+
+/* ヘッダー: 見出し(h1)と同じ文字サイズ 1.2rem の 2 倍 */
+.owl-avatar {
+  font-size: 1.2rem;      /* ← 大きくしたいときはここを変える（例: 1.6rem で約 51px） */
+  flex: 0 0 auto;         /* 画面が狭くても縮まない */
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+}
+
+/* 返信の横: 吹き出しの文字サイズ .95rem の 2 倍 */
+.message-avatar {
+  font-size: .95rem;
+  flex: 0 0 auto;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+}
+
+.owl-avatar img,
+.message-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* 丸の枠に合わせて切り抜く */
+}
