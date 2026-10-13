@@ -6,6 +6,9 @@
  */
 const GAS_WEB_APP_URL = "https://faq-api.yespcai.workers.dev/";
 
+// フクロウのアバター画像（index.html と同じフォルダに置く）
+const OWL_IMAGE = "owl.png";
+
 const chatMessages = document.getElementById("chatMessages");
 const chatForm = document.getElementById("chatForm");
 const questionInput = document.getElementById("questionInput");
@@ -39,7 +42,11 @@ function addMessageRow(role, text) {
     const avatar = document.createElement("div");
     avatar.className = "message-avatar";
     avatar.setAttribute("aria-hidden", "true");
-    avatar.textContent = "🦉";
+    const image = document.createElement("img");
+    image.src = OWL_IMAGE;
+    image.alt = "";
+    image.decoding = "async";
+    avatar.appendChild(image);
     row.appendChild(avatar);
   }
 
