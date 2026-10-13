@@ -451,7 +451,6 @@ textarea:focus-visible {
   text-align: left;
 }
 
-
 /* 外部ウィジェット内で表示するときの専用レイアウト */
 html.widget-mode,
 html.widget-mode body {
@@ -486,7 +485,6 @@ html.widget-mode .page-footer {
   display: none;
 }
 
-```css
 /* ===== 外部ウィジェット表示の改善 ===== */
 
 /* チャット全体を画面内に収める */
@@ -565,4 +563,3 @@ html.widget-mode .connection-notice {
   padding: 6px 8px;
   font-size: 0.75rem;
 }
-```
