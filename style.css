@@ -434,3 +434,19 @@ textarea:focus-visible {
   height: 100%;
   object-fit: cover;      /* 丸の枠に合わせて切り抜く */
 }
+
+/* ===== style.css の末尾にそのまま追記してください =====
+   質問例ボタン（営業時間〜/ 住所〜/ 駐車場〜/ 無料体験〜）を、横スクロールではなく複数行に折り返します。 */
+
+.quick-questions {
+  flex-wrap: wrap;        /* 入りきらないボタンは次の行へ */
+  overflow-x: visible;    /* 横スクロールをやめる */
+}
+
+.quick-question {
+  flex: 0 1 auto;         /* 必要なら縮められる */
+  max-width: 100%;        /* 画面より長いボタンは、ボタンの中で改行する */
+  border-radius: 16px;    /* 2 行になっても丸が不自然にならないよう、角丸を少し小さく */
+  line-height: 1.45;
+  text-align: left;
+}
