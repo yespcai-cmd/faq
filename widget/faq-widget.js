@@ -8,7 +8,7 @@
   // ===== 設定 =====
 
   // 既存のFAQチャットページの公開URL
-  const CHAT_PAGE_URL = https://yespcai-cmd.github.io/faq/
+  const CHAT_PAGE_URL =
     script.dataset.chatUrl ||
     "https://yespcai-cmd.github.io/faq/index.html?widget=1";
 
